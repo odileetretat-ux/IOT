@@ -1,0 +1,1923 @@
+[
+    {
+        "id": "67ddf3a1bb7fa4cd",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cfff5280c6f0293a",
+        "type": "tab",
+        "label": "ESP32 REST Control",
+        "disabled": false,
+        "info": "Flow pour ESP32 avec DHT11 - REST API"
+    },
+    {
+        "id": "31425ea2420d0888",
+        "type": "tab",
+        "label": "ESP32 REST Control - HTTP GET",
+        "disabled": true,
+        "info": "Flow conforme au TP: Switch → Function 2 → HTTP → Function 1 → HTTP Response"
+    },
+    {
+        "id": "ac7a943858ccb843",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3dbf2c5a262e8b14",
+        "type": "tab",
+        "label": "WiFi LoRa Localization",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "58268cd0e3865665",
+        "type": "tab",
+        "label": "WiFi LoRa Localization",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "grp_csv_map",
+        "type": "group",
+        "z": "3dbf2c5a262e8b14",
+        "name": "partie3&4",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#e3f2fd",
+            "label": true
+        },
+        "nodes": [
+            "inject_init_csv",
+            "template_csv_raw",
+            "csv_parse_node",
+            "func_save_and_draw",
+            "worldmap_node"
+        ],
+        "x": 14,
+        "y": 399,
+        "w": 1072,
+        "h": 102
+    },
+    {
+        "id": "e34a0433a87a046b",
+        "type": "group",
+        "z": "58268cd0e3865665",
+        "name": "AP DB (CSV) + Whitelist (CSV) + Map",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#e3f2fd",
+            "label": true
+        },
+        "nodes": [
+            "2b96864c2dee6297",
+            "d431f56f031d069e",
+            "6de94a4692af93dd",
+            "cbac268cbe6392c8",
+            "81e578e605f64fab",
+            "bfbcd49fd63ac402",
+            "3bc30e6719f45bf5",
+            "d9d66e63e4c9e133"
+        ],
+        "x": -16,
+        "y": 419,
+        "w": 1262,
+        "h": 122
+    },
+    {
+        "id": "e4b9684b1bfaa705",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "646cb334677f95fe",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "e4b9684b1bfaa705",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "led_tab",
+        "type": "ui_tab",
+        "name": "ESP32控制",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "led_control",
+        "type": "ui_group",
+        "name": "LED控制面板",
+        "tab": "led_tab",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "ui_tab_1",
+        "type": "ui_tab",
+        "name": "ESP32 Control",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "ui_group_1",
+        "type": "ui_group",
+        "name": "Capteur DHT11",
+        "tab": "ui_tab_1",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "ui_group_2",
+        "type": "ui_group",
+        "name": "Contrôle LED",
+        "tab": "ui_tab_1",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "8396d76a56e29b32",
+        "type": "ui_tab",
+        "name": "ESP32 DHT11",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "00da856b34a4c029",
+        "type": "ui_group",
+        "name": "Capteur DHT11",
+        "tab": "8396d76a56e29b32",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "b80fe6a194262d8c",
+        "type": "ui_group",
+        "name": "Contrôle LED",
+        "tab": "8396d76a56e29b32",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "46b70ab028a1d223",
+        "type": "ui_tab",
+        "name": "ESP32 DHT11 Control",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e82e642ca9020b51",
+        "type": "ui_group",
+        "name": "Capteur DHT11 - REST",
+        "tab": "46b70ab028a1d223",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "98e1d7bf2e0a6175",
+        "type": "ui_group",
+        "name": "Contrôle LED - REST",
+        "tab": "46b70ab028a1d223",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "538fe017f63fb41e",
+        "type": "ui_group",
+        "name": "Capteur DHT11 - MQTT",
+        "tab": "46b70ab028a1d223",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "0e91be10fd01c2c1",
+        "type": "ui_group",
+        "name": "Contrôle LED - MQTT",
+        "tab": "46b70ab028a1d223",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "aa0f11c7c8b63f20",
+        "type": "ui_tab",
+        "name": "ESP32 LED Control",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2c6a3c34c2b13bb3",
+        "type": "ui_group",
+        "name": "Contrôle LED - REST",
+        "tab": "aa0f11c7c8b63f20",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "led_control_tab",
+        "type": "ui_tab",
+        "name": "Contrôle LED",
+        "icon": "fa-lightbulb-o",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "led_control_group",
+        "type": "ui_group",
+        "name": "Contrôle LED HTTP",
+        "tab": "led_control_tab",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c2a3fbdf769b371a",
+        "type": "ui_group",
+        "name": "Contrôle LED - REST",
+        "tab": "46b70ab028a1d223",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ui-tab",
+        "type": "ui_tab",
+        "name": "TP2 Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ui-group",
+        "type": "ui_group",
+        "name": "LoRa-E5 Demo",
+        "tab": "ui-tab",
+        "order": 1,
+        "disp": true,
+        "width": 12,
+        "collapse": false
+    },
+    {
+        "id": "bd06b8c0d19cd693",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "eu1.cloud.thethings.network",
+        "port": 1883,
+        "clientid": "1962107946",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "tls1",
+        "type": "tls-config",
+        "name": "TLS",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "verifyservercert": true
+    },
+    {
+        "id": "ui_tab",
+        "type": "ui_tab",
+        "name": "LoRaWAN",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "tts_mqtt",
+        "type": "mqtt-broker",
+        "name": "TTS MQTT",
+        "broker": "eu1.cloud.thethings.network",
+        "port": "8883",
+        "tls": "tls1",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ui_grp",
+        "type": "ui_group",
+        "name": "WiFi-Loc",
+        "tab": "ui_tab",
+        "order": 1,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "9447baf510e6c967",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "mqtt_broker_ttn",
+        "type": "mqtt-broker",
+        "name": "TTN MQTT",
+        "broker": "CHANGE_ME_TTN_BROKER",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "sqlite_conf_db",
+        "type": "sqlitedb",
+        "db": "D:\\Node_RED\\wifi_loc.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "d456e9209ec68760",
+        "type": "http in",
+        "z": "31425ea2420d0888",
+        "name": "Receive Sensor Data",
+        "url": "/sensor",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "6805651564b809f5"
+            ]
+        ]
+    },
+    {
+        "id": "6805651564b809f5",
+        "type": "function",
+        "z": "31425ea2420d0888",
+        "name": "function 1 - Sensor",
+        "func": "// Function 1: Traitement des données capteur\n// Simuler des données de capteur ou traiter les données reçues\nlet sensorData = {\n    temperature: (Math.random() * 10 + 20).toFixed(1), // 20-30°C\n    humidity: (Math.random() * 30 + 40).toFixed(1),    // 40-70%\n    timestamp: new Date().toISOString()\n};\n\nmsg.payload = sensorData;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "27ecf045d1316596",
+                "fefde64b96eb8b21",
+                "d5a74abb83a07c92"
+            ]
+        ]
+    },
+    {
+        "id": "27ecf045d1316596",
+        "type": "http response",
+        "z": "31425ea2420d0888",
+        "name": "Sensor Response",
+        "statusCode": "200",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "x": 580,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fefde64b96eb8b21",
+        "type": "function",
+        "z": "31425ea2420d0888",
+        "name": "Process Temperature",
+        "func": "// Traiter la température\nlet temp = msg.payload.temperature;\nif (temp !== undefined && temp !== null && !isNaN(temp)) {\n    msg.payload = parseFloat(temp);\n    msg.topic = \"Temperature\";\n    node.status({fill:\"green\",shape:\"dot\",text:temp + \"°C\"});\n    return msg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No data\"});\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 100,
+        "wires": [
+            [
+                "b79a2f34debc493e",
+                "952c8e48b1fb766a"
+            ]
+        ]
+    },
+    {
+        "id": "d5a74abb83a07c92",
+        "type": "function",
+        "z": "31425ea2420d0888",
+        "name": "Process Humidity",
+        "func": "// Traiter l'humidité\nlet hum = msg.payload.humidity;\nif (hum !== undefined && hum !== null && !isNaN(hum)) {\n    msg.payload = parseFloat(hum);\n    msg.topic = \"Humidity\";\n    node.status({fill:\"green\",shape:\"dot\",text:hum + \"%\"});\n    return msg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No data\"});\n    return null;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 140,
+        "wires": [
+            [
+                "14ad465685798025",
+                "fd94303b67f66c54"
+            ]
+        ]
+    },
+    {
+        "id": "b79a2f34debc493e",
+        "type": "ui_gauge",
+        "z": "31425ea2420d0888",
+        "name": "Temperature Gauge",
+        "group": "e82e642ca9020b51",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Température",
+        "label": "°C",
+        "format": "{{value | number:1}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "30",
+        "x": 820,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "14ad465685798025",
+        "type": "ui_gauge",
+        "z": "31425ea2420d0888",
+        "name": "Humidity Gauge",
+        "group": "e82e642ca9020b51",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Humidité",
+        "label": "%",
+        "format": "{{value | number:1}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "30",
+        "seg2": "60",
+        "diff": false,
+        "className": "",
+        "x": 810,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "952c8e48b1fb766a",
+        "type": "ui_chart",
+        "z": "31425ea2420d0888",
+        "name": "Temperature Chart",
+        "group": "e82e642ca9020b51",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "label": "Historique Température",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente de données...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 5,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 830,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd94303b67f66c54",
+        "type": "ui_chart",
+        "z": "31425ea2420d0888",
+        "name": "Humidity Chart",
+        "group": "e82e642ca9020b51",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "label": "Historique Humidité",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente de données...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 5,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#aec7e8",
+            "#1f77b4",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 820,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06874382c4bba21c",
+        "type": "ui_switch",
+        "z": "31425ea2420d0888",
+        "name": "LED Control Switch",
+        "label": "LED ON/OFF",
+        "tooltip": "",
+        "group": "c2a3fbdf769b371a",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "d9c2c85a209a64fc"
+            ]
+        ]
+    },
+    {
+        "id": "d9c2c85a209a64fc",
+        "type": "function",
+        "z": "31425ea2420d0888",
+        "name": "Prepare LED Command",
+        "func": "let ip = \"192.168.1.50\"; // ⚠️ changer par l'IP de votre ESP32\nlet state = msg.payload;\nmsg.method = \"GET\";\nmsg.url = `http://${ip}/led?state=${state}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "6588fa8e40998bf8",
+                "534e98f76c045796"
+            ]
+        ]
+    },
+    {
+        "id": "6588fa8e40998bf8",
+        "type": "http request",
+        "z": "31425ea2420d0888",
+        "name": "Send LED Command to ESP32",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "/LED",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 700,
+        "y": 360,
+        "wires": [
+            [
+                "b62991c22afc957d"
+            ]
+        ]
+    },
+    {
+        "id": "534e98f76c045796",
+        "type": "debug",
+        "z": "31425ea2420d0888",
+        "name": "Debug LED",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 710,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b62991c22afc957d",
+        "type": "ui_text",
+        "z": "31425ea2420d0888",
+        "group": "c2a3fbdf769b371a",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "LED Status",
+        "label": "État LED:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 950,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4e8a61f0ee0b47d6",
+        "type": "mqtt in",
+        "z": "ac7a943858ccb843",
+        "name": "TTN Uplink (ALL DEVICES)",
+        "topic": "v3/1962107946@ttn/devices/jasmine/up",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "bd06b8c0d19cd693",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "61db2f5a7421aabf",
+                "4b30bb8ee65715a3"
+            ]
+        ]
+    },
+    {
+        "id": "61db2f5a7421aabf",
+        "type": "function",
+        "z": "ac7a943858ccb843",
+        "name": "Decode frm_payload (base64→bytes)",
+        "func": "let obj = typeof msg.payload === 'string' ? JSON.parse(msg.payload) : msg.payload;\nlet b64 = obj && obj.uplink_message && obj.uplink_message.frm_payload;\nif (!b64) { node.status({fill:'yellow',shape:'ring',text:'无 frm_payload'}); return null; }\nlet buf = Buffer.from(b64, 'base64');\nlet temp = buf[0];\nlet hum  = buf[1];\nnode.status({fill:'green',shape:'dot',text:`T=${temp}°C H=${hum}%`});\nmsg.payload = {temp, hum, raw: buf.toString('hex')};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "8b38e77554afe945",
+                "298c71daa06b50d3",
+                "3064a0edd615dfcd"
+            ]
+        ]
+    },
+    {
+        "id": "4b30bb8ee65715a3",
+        "type": "debug",
+        "z": "ac7a943858ccb843",
+        "name": "RAW MQTT JSON",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 410,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8b38e77554afe945",
+        "type": "debug",
+        "z": "ac7a943858ccb843",
+        "name": "Decoded {temp,hum}",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "jsonata",
+        "x": 660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9b401c0584987d71",
+        "type": "function",
+        "z": "ac7a943858ccb843",
+        "name": "Build TTN Downlink JSON",
+        "func": "let on = !!msg.payload;\nlet frm = Buffer.from([on ? 0x01 : 0x00]).toString('base64');\nmsg.headers = {};\nmsg.payload = { downlinks: [ { f_port: 15, frm_payload: frm, confirmed: false, priority: 'NORMAL' } ] };\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 460,
+        "wires": [
+            [
+                "b1e9e358a3891eac",
+                "8463e862078c2c63"
+            ]
+        ]
+    },
+    {
+        "id": "b1e9e358a3891eac",
+        "type": "mqtt out",
+        "z": "ac7a943858ccb843",
+        "name": "TTN Downlink PUSH",
+        "topic": "v3/1962107946@ttn/devices/jasmine/down/push",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bd06b8c0d19cd693",
+        "x": 780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8463e862078c2c63",
+        "type": "debug",
+        "z": "ac7a943858ccb843",
+        "name": "Downlink JSON → MQTT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 800,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "80536466f597912b",
+        "type": "ui_switch",
+        "z": "ac7a943858ccb843",
+        "name": "",
+        "label": "LED 开关",
+        "tooltip": "",
+        "group": "ui-group",
+        "order": 0,
+        "width": 6,
+        "height": 2,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "9b401c0584987d71"
+            ]
+        ]
+    },
+    {
+        "id": "298c71daa06b50d3",
+        "type": "function",
+        "z": "ac7a943858ccb843",
+        "name": "Pick Temp → payload",
+        "func": "if (msg && msg.payload && typeof msg.payload.temp !== 'undefined') {\n  msg.topic = 'temperature';\n  msg.payload = Number(msg.payload.temp);\n  return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 100,
+        "wires": [
+            [
+                "c129c92add707204"
+            ]
+        ]
+    },
+    {
+        "id": "3064a0edd615dfcd",
+        "type": "function",
+        "z": "ac7a943858ccb843",
+        "name": "Pick Hum → payload",
+        "func": "if (msg && msg.payload && typeof msg.payload.hum !== 'undefined') {\n  msg.topic = 'humidity';\n  msg.payload = Number(msg.payload.hum);\n  return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "af07c8ed95b49884"
+            ]
+        ]
+    },
+    {
+        "id": "c129c92add707204",
+        "type": "ui_chart",
+        "z": "ac7a943858ccb843",
+        "name": "Temperature (°C)",
+        "group": "ui-group",
+        "order": 2,
+        "width": 12,
+        "height": 4,
+        "label": "Temperature (°C)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "等待温度数据…",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "12",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 910,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af07c8ed95b49884",
+        "type": "ui_chart",
+        "z": "ac7a943858ccb843",
+        "name": "Humidity (%)",
+        "group": "ui-group",
+        "order": 3,
+        "width": 12,
+        "height": 4,
+        "label": "Humidity (%)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "等待湿度数据…",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "12",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "outputs": 1,
+        "x": 910,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "efa6bfab18b6c47f",
+        "type": "mqtt in",
+        "z": "3dbf2c5a262e8b14",
+        "name": "TTN uplink",
+        "topic": "v3/1962107946@ttn/devices/+/up",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "bd06b8c0d19cd693",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "bc85f346d47e8506"
+            ]
+        ]
+    },
+    {
+        "id": "bc85f346d47e8506",
+        "type": "json",
+        "z": "3dbf2c5a262e8b14",
+        "name": "parse TTN JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "9de4660f5b9090d7"
+            ]
+        ]
+    },
+    {
+        "id": "9de4660f5b9090d7",
+        "type": "function",
+        "z": "3dbf2c5a262e8b14",
+        "name": "decode LoRa payload (multi-AP)",
+        "func": "// 解码 Arduino 发送的 LoRa 数据包\n// 格式: [Count (1B)] + [ (MAC 6B + RSSI 1B) * Count ] + [Timestamp (2B)]\n\n// 1. 获取 Payload Buffer\nlet payloadRaw = msg.payload.uplink_message.frm_payload;\nif (!payloadRaw) {\n    node.warn(\"无 payload 数据\");\n    return null;\n}\nlet buffer = Buffer.from(payloadRaw, 'base64');\n\n// 2. 检查最小长度 (至少要有 1字节 Count + 2字节 Timestamp = 3字节)\nif(buffer.length < 3) {\n    node.warn(\"数据包太短: \" + buffer.length);\n    return null;\n}\n\nlet count = buffer[0]; // 第1个字节是数量\nlet aps = [];\nlet ptr = 1; // 指针从第2个字节开始\n\n// 3. 循环读取 AP 数据\nfor(let i=0; i<count; i++) {\n    // 检查是否有足够的字节读 MAC(6) + RSSI(1) = 7字节\n    if(ptr + 7 > buffer.length) {\n        node.warn(\"Buffer too short for AP #\" + i);\n        break;\n    }\n    \n    // 读取 6 字节 MAC\n    let macBuf = buffer.slice(ptr, ptr+6);\n    let mac = macBuf.toString('hex').match(/../g).join(':').toUpperCase();\n    ptr += 6;\n    \n    // 读取 1 字节 RSSI (转为有符号整数)\n    let rssi = buffer.readInt8(ptr);\n    ptr += 1;\n    \n    aps.push({mac: mac, rssi: rssi});\n}\n\n// 4. 读取时间戳 (修复点：只读 2 字节，而不是 4 字节)\nlet ts = 0;\nif (ptr + 2 <= buffer.length) {\n    ts = buffer.readUInt16BE(ptr); // ✅ 关键修改：读取 16位 (2字节)\n} else {\n    node.warn(\"Buffer too short for timestamp (Expected 2 bytes)\");\n}\n\n// 5. 输出结果\nmsg.payload = { \n    aps: aps, \n    raw_count: count,\n    timestamp: ts\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 220,
+        "wires": [
+            [
+                "116cceb62b85cd08",
+                "func_algo_v2"
+            ]
+        ]
+    },
+    {
+        "id": "2a42988ff49bb656",
+        "type": "sqlite",
+        "z": "3dbf2c5a262e8b14",
+        "mydb": "sqlite_conf_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQLite DB",
+        "x": 850,
+        "y": 140,
+        "wires": [
+            [
+                "858dd901360381c0"
+            ]
+        ]
+    },
+    {
+        "id": "116cceb62b85cd08",
+        "type": "debug",
+        "z": "3dbf2c5a262e8b14",
+        "name": "decoded payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "858dd901360381c0",
+        "type": "debug",
+        "z": "3dbf2c5a262e8b14",
+        "name": "sqlite result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "754142823b841c83",
+        "type": "inject",
+        "z": "3dbf2c5a262e8b14",
+        "name": "CREATE wifi_access_points",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "c4393c4aaf73f3fe"
+            ]
+        ]
+    },
+    {
+        "id": "c4393c4aaf73f3fe",
+        "type": "function",
+        "z": "3dbf2c5a262e8b14",
+        "name": "create wifi_access_points",
+        "func": "msg.topic = `\nCREATE TABLE IF NOT EXISTS wifi_access_points (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  mac TEXT UNIQUE,\n  ssid TEXT,\n  room TEXT,\n  floor TEXT,\n  x REAL,\n  y REAL\n);\n`;\nmsg.payload = [];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "2a42988ff49bb656"
+            ]
+        ]
+    },
+    {
+        "id": "ef05b5c4704e7487",
+        "type": "inject",
+        "z": "3dbf2c5a262e8b14",
+        "name": "CREATE wifi_measurements",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "e6fdafd3f2162c80"
+            ]
+        ]
+    },
+    {
+        "id": "e6fdafd3f2162c80",
+        "type": "function",
+        "z": "3dbf2c5a262e8b14",
+        "name": "create wifi_measurements",
+        "func": "msg.topic = `\nCREATE TABLE IF NOT EXISTS wifi_measurements (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  node_id TEXT,\n  ap1_mac TEXT,\n  ap1_rssi INTEGER,\n  ap2_mac TEXT,\n  ap2_rssi INTEGER,\n  ap3_mac TEXT,\n  ap3_rssi INTEGER,\n  timestamp INTEGER,\n  est_x REAL,\n  est_y REAL\n);\n`;\nmsg.payload = [];\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "2a42988ff49bb656"
+            ]
+        ]
+    },
+    {
+        "id": "inject_init_csv",
+        "type": "inject",
+        "z": "3dbf2c5a262e8b14",
+        "g": "grp_csv_map",
+        "name": "1. load database",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "template_csv_raw"
+            ]
+        ]
+    },
+    {
+        "id": "template_csv_raw",
+        "type": "template",
+        "z": "3dbf2c5a262e8b14",
+        "g": "grp_csv_map",
+        "name": "CSV data",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "text",
+        "syntax": "plain",
+        "template": "ssid,mac,rssi,channel,room,latitude,longitude\neduroam,58:97:BD:D0:96:62,,,,48.845412,2.357088\neduroam,58:97:BD:D0:96:6D,,,,48.845375,2.356908\neduroam,58:97:BD:CD:9C:62,,,,48.845402,2.356948\neduroam,58:97:BD:07:D6:64,,,,48.845464,2.357042\n,,,,,, \ncongres,58:97:BD:D0:96:61,,,,48.845412,2.357088\ncongres,58:97:BD:D0:96:6E,,,,48.845375,2.356908\ncongres,58:97:BD:CD:9C:61,,,,48.845402,2.356948\ncongres,58:97:BD:07:D6:62,,,,48.845443,2.35691\n,,,,,, \neduspot,58:97:BD:D0:96:60,,,,48.845402,2.356948\neduspot,58:97:BD:D0:96:6F,,,,48.845337,2.356942\neduspot,58:97:BD:07:D6:61,,,,48.845348,2.356941\neduspot,58:97:BD:CD:9C:60,,,,48.845402,2.356948\n,,,,,, \nscai ,58:97:BD:D0:96:63,,,,48.845412,2.357088\nscai,58:97:BD:D0:96:6C,,,,48.845381,2.356918\nscai,58:97:BD:CD:9C:63,,,,48.845402,2.356948\n,,,,,, \nISCD,E8:65:D4:72:F9:79,,,,48.845333,2.356945\n,,,,,, \nscaiteam,58:D9:D5:41:50:32,,,,48.845386,2.356932\nscaiteam,58:D9:D5:41:50:42,,,,48.845381,2.356922",
+        "output": "str",
+        "x": 340,
+        "y": 460,
+        "wires": [
+            [
+                "csv_parse_node"
+            ]
+        ]
+    },
+    {
+        "id": "csv_parse_node",
+        "type": "csv",
+        "z": "3dbf2c5a262e8b14",
+        "g": "grp_csv_map",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "func_save_and_draw"
+            ]
+        ]
+    },
+    {
+        "id": "func_save_and_draw",
+        "type": "function",
+        "z": "3dbf2c5a262e8b14",
+        "g": "grp_csv_map",
+        "name": "save database & tracer blue points",
+        "func": "// 1. 保存到 Global Context\nlet db = {};\nlet rows = msg.payload;\n\nfor(let i=0; i<rows.length; i++) {\n    let row = rows[i];\n    if(row.mac && row.latitude && row.longitude) {\n        let mac = row.mac.toUpperCase().trim();\n        db[mac] = {\n            lat: parseFloat(row.latitude),\n            lon: parseFloat(row.longitude),\n            ssid: row.ssid\n        };\n    }\n}\nglobal.set(\"wifi_db\", db);\nnode.warn(\"✅ WiFi DB Loaded: \" + Object.keys(db).length + \" APs\");\n\n// 2. 生成地图绘图指令 (画蓝色的 WiFi 图标)\nlet mapMsgs = [];\n// 清除旧图层\nmapMsgs.push({ payload: { command: { action: \"clear\", layer: \"StaticAPs\" } } });\n\nlet keys = Object.keys(db);\nfor(let i=0; i<keys.length; i++) {\n    let mac = keys[i];\n    let ap = db[mac];\n    mapMsgs.push({\n        payload: {\n            lat: ap.lat,\n            lon: ap.lon,\n            name: ap.ssid + \"<br>\" + mac,\n            icon: \"wifi\",\n            iconColor: \"blue\",\n            layer: \"StaticAPs\",\n            action: \"draw\"\n        }\n    });\n}\n\n// 自动定位地图中心\nif(keys.length > 0) {\n    let first = db[keys[0]];\n    mapMsgs.push({\n        payload: {\n            command: {\n                lat: first.lat,\n                lon: first.lon,\n                zoom: 18\n            }\n        }\n    });\n}\n\nreturn [mapMsgs];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 460,
+        "wires": [
+            [
+                "worldmap_node"
+            ]
+        ]
+    },
+    {
+        "id": "worldmap_node",
+        "type": "worldmap",
+        "z": "3dbf2c5a262e8b14",
+        "g": "grp_csv_map",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSM",
+        "cluster": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSM,OSMG,OSMH,RW,RWA,UB,ESRI,ESRIS,HB,HBW,SE,TE,GR,SC,SP,PT",
+        "mapname": "",
+        "x": 1000,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "func_algo_v2",
+        "type": "function",
+        "z": "3dbf2c5a262e8b14",
+        "name": "fonction",
+        "func": "// === Node-RED Weighted Localization Algorithm (Final Fix) ===\n\n// 1. Get global database\nlet db = global.get(\"wifi_db\");\n\n// 2. Parse input Payload\n// The decoder outputs msg.payload.aps (lowercase), not APs\nlet aps = msg.payload.aps || []; \nlet ts = msg.payload.timestamp || 0;\n// node_id is hardcoded for now, can be retrieved from topic later\nlet node_id = \"ESP32_Tracker\"; \n\n// --- Debug Checks ---\nif (!db) {\n    node.warn(\"❌ Error: Database not loaded! Please click the blue [1. Click to Load DB] button\");\n    return [null, null];\n}\nif (!aps || aps.length === 0) {\n    node.warn(\"⚠️ Warning: Received empty packet, no valid APs\");\n    return [null, null];\n}\n\nnode.warn(\"🔍 Starting localization calculation... Received \" + aps.length + \" APs\");\n\n// 3. Matching Algorithm\nlet matchedPoints = [];\n\nfor (let i = 0; i < aps.length; i++) {\n    let scanMac = aps[i].mac; // e.g. \"58:97:BD:...\"\n    let scanRssi = aps[i].rssi;\n    \n    // Find this MAC in the database\n    if (db[scanMac]) {\n        let found = db[scanMac];\n        node.warn(\"✅ Match successful: \" + scanMac + \" (\" + found.ssid + \") RSSI: \" + scanRssi);\n        matchedPoints.push({\n            lat: parseFloat(found.lat),\n            lon: parseFloat(found.lon),\n            rssi: scanRssi\n        });\n    } else {\n        node.warn(\"❌ Match failed: \" + scanMac + \" (Not in database)\");\n    }\n}\n\nif (matchedPoints.length === 0) {\n    node.warn(\"⚠️ No APs matched the database, cannot localize. Please check if MACs in CSV match the scan.\");\n    // Can still save to DB for records, but won't send to map\n}\n\n// 4. Weighted Centroid Calculation\nlet finalLat = 0;\nlet finalLon = 0;\n\nif (matchedPoints.length > 0) {\n    let totalLat = 0;\n    let totalLon = 0;\n    let totalWeight = 0;\n\n    matchedPoints.forEach(p => {\n        // Optimized weight formula: (RSSI + 100)^2 \n        // Stronger signal (-50 > -90) means higher weight\n        // Adding 100 converts negative values to positive (Assuming min signal -100dBm)\n        let w = Math.pow((p.rssi + 100), 2);\n        if (w <= 0) w = 0.1; // Prevent weight from being 0\n\n        totalLat += p.lat * w;\n        totalLon += p.lon * w;\n        totalWeight += w;\n    });\n\n    finalLat = totalLat / totalWeight;\n    finalLon = totalLon / totalWeight;\n\n    node.warn(\"📍 Localization successful: \" + finalLat.toFixed(6) + \", \" + finalLon.toFixed(6));\n}\n\n// 5. Build SQL Insert Statement (Save history)\n// Only the first 3 APs can be stored in the table structure\nlet ap1 = aps[0] || {mac: null, rssi: null};\nlet ap2 = aps[1] || {mac: null, rssi: null};\nlet ap3 = aps[2] || {mac: null, rssi: null};\n\nfunction sqlValStr(v) { return (v===null||v===undefined) ? \"NULL\" : \"'\" + String(v).replace(/'/g, \"''\") + \"'\"; }\nfunction sqlValNum(v) { return (v===null||v===undefined||isNaN(v)) ? \"NULL\" : String(v); }\n\nlet sql = `\nINSERT INTO wifi_measurements\n(node_id, ap1_mac, ap1_rssi, ap2_mac, ap2_rssi, ap3_mac, ap3_rssi, timestamp, est_x, est_y)\nVALUES\n(\n  ${sqlValStr(node_id)},\n  ${sqlValStr(ap1.mac)}, ${sqlValNum(ap1.rssi)},\n  ${sqlValStr(ap2.mac)}, ${sqlValNum(ap2.rssi)},\n  ${sqlValStr(ap3.mac)}, ${sqlValNum(ap3.rssi)},\n  ${sqlValNum(ts)},\n  ${sqlValNum(finalLat)},\n  ${sqlValNum(finalLon)}\n);\n`;\n\n// 6. Build Map Message\nlet mapMsg = null;\nif (matchedPoints.length > 0) {\n    mapMsg = {\n        payload: {\n            lat: finalLat, \n            lon: finalLon,\n            name: \"My ESP32\", // Display name\n            icon: \"user\",     // Icon type\n            iconColor: \"orange\",\n            layer: \"UserLayer\",\n            action: \"move\",    // Move icon instead of creating new\n            zoom: 19           // Auto zoom after localization\n        }\n    };\n}\n\n// Output: [0] to Database, [1] to Map\nreturn [{topic: sql, payload: []}, mapMsg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 240,
+        "wires": [
+            [
+                "2a42988ff49bb656"
+            ],
+            [
+                "worldmap_node"
+            ]
+        ]
+    },
+    {
+        "id": "2b96864c2dee6297",
+        "type": "inject",
+        "z": "58268cd0e3865665",
+        "g": "e34a0433a87a046b",
+        "name": "0. init (load whitelist -> load AP DB)",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.2,
+        "topic": "",
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "d431f56f031d069e"
+            ]
+        ]
+    },
+    {
+        "id": "d431f56f031d069e",
+        "type": "file in",
+        "z": "58268cd0e3865665",
+        "g": "e34a0433a87a046b",
+        "name": "1) read whitelist.csv",
+        "filename": "D:\\\\Node_RED\\\\whitelist.csv",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": true,
+        "encoding": "none",
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "6de94a4692af93dd"
+            ]
+        ]
+    },
+    {
+        "id": "6de94a4692af93dd",
+        "type": "csv",
+        "z": "58268cd0e3865665",
+        "g": "e34a0433a87a046b",
+        "name": "parse whitelist CSV",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "cbac268cbe6392c8"
+            ]
+        ]
+    },
+    {
+        "id": "cbac268cbe6392c8",
+        "type": "function",
+        "z": "58268cd0e3865665",
+        "g": "e34a0433a87a046b",
+        "name": "store whitelist set (global)",
+        "func": "// whitelist.csv expected columns: mac (recommended)\n// Robust: accept mac/MAC/Adresse MAC (BSSID)\n\nlet rows = msg.payload || [];\nlet set = {};\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i] || {};\n    let mac = (row.mac || row.MAC || row[\"Adresse MAC (BSSID)\"] || row.bssid || row.BSSID || \"\")\n        .toString().trim().toUpperCase();\n    if (mac) set[mac] = true;\n}\n\nglobal.set(\"whitelist_set\", set);\nnode.warn(\"✅ Whitelist Loaded: \" + Object.keys(set).length + \" MACs\");\n\n// trigger AP DB load next\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 460,
+        "wires": [
+            [
+                "81e578e605f64fab"
+            ]
+        ]
+    },
+    {
+        "id": "81e578e605f64fab",
+        "type": "file in",
+        "z": "58268cd0e3865665",
+        "g": "e34a0433a87a046b",
+        "name": "2) read AP DB CSV (dbrt.csv)",
+        "filename": "D:\\\\xwechat_files\\\\wxid_3h527rvw197522_95de\\\\msg\\\\file\\\\2026-01\\\\dbrt.csv",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": true,
+        "encoding": "none",
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "bfbcd49fd63ac402"
+            ]
+        ]
+    },
+    {
+        "id": "bfbcd49fd63ac402",
+        "type": "csv",
+        "z": "58268cd0e3865665",
+        "g": "e34a0433a87a046b",
+        "name": "parse AP DB CSV",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "3bc30e6719f45bf5"
+            ]
+        ]
+    },
+    {
+        "id": "3bc30e6719f45bf5",
+        "type": "function",
+        "z": "58268cd0e3865665",
+        "g": "e34a0433a87a046b",
+        "name": "build wifi_db (filter by whitelist) + draw blue APs",
+        "func": "// Build global wifi_db from AP DB CSV\n// Supports French headers:\n//  - \"Nom du réseau (SSID)\"\n//  - \"Adresse MAC (BSSID)\"\n//  - \"Latitude\"\n//  - \"Longitude\"\n// Also supports generic headers: ssid, mac, latitude, longitude\n\nlet rows = msg.payload || [];\nlet whitelist = global.get(\"whitelist_set\") || null;\nlet useWhitelist = whitelist && Object.keys(whitelist).length > 0;\n\nlet db = {};\n\nfor (let i = 0; i < rows.length; i++) {\n    let row = rows[i] || {};\n\n    // MAC field (robust)\n    let mac = (row.mac || row.MAC || row[\"Adresse MAC (BSSID)\"] || row[\"Adresse MAC\"] || row.bssid || row.BSSID || row[\"BSSID\"] || \"\")\n        .toString().trim().toUpperCase();\n\n    // SSID field (optional)\n    let ssid = (row.ssid || row.SSID || row[\"Nom du réseau (SSID)\"] || row[\"Nom du réseau\"] || row[\"SSID\"] || \"\")\n        .toString().trim();\n\n    // Lat/Lon fields (robust)\n    let lat = row.latitude ?? row.Latitude ?? row[\"Latitude\"] ?? row[\"lat\"];\n    let lon = row.longitude ?? row.Longitude ?? row[\"Longitude\"] ?? row[\"lon\"];\n\n    if (!mac) continue;\n\n    // Filter by whitelist\n    if (useWhitelist && !whitelist[mac]) continue;\n\n    if (lat === undefined || lon === undefined || lat === \"\" || lon === \"\") continue;\n\n    let plat = parseFloat(lat);\n    let plon = parseFloat(lon);\n    if (isNaN(plat) || isNaN(plon)) continue;\n\n    db[mac] = { lat: plat, lon: plon, ssid: ssid };\n}\n\nglobal.set(\"wifi_db\", db);\nnode.warn(\"✅ WiFi AP DB Loaded into memory: \" + Object.keys(db).length + \" APs\" + (useWhitelist ? \" (whitelist filtered)\" : \"\"));\n\n// Draw blue wifi icons on worldmap\nlet mapMsgs = [];\nmapMsgs.push({ payload: { command: { action: \"clear\", layer: \"StaticAPs\" } } });\n\nlet keys = Object.keys(db);\nfor (let i = 0; i < keys.length; i++) {\n    let mac = keys[i];\n    let ap = db[mac];\n    mapMsgs.push({\n        payload: {\n            lat: ap.lat,\n            lon: ap.lon,\n            name: (ap.ssid ? ap.ssid : \"(unknown)\") + \"<br>\" + mac,\n            icon: \"wifi\",\n            iconColor: \"blue\",\n            layer: \"StaticAPs\",\n            action: \"draw\"\n        }\n    });\n}\n\nif (keys.length > 0) {\n    let first = db[keys[0]];\n    mapMsgs.push({ payload: { command: { lat: first.lat, lon: first.lon, zoom: 18 } } });\n}\n\nreturn [mapMsgs];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "d9d66e63e4c9e133"
+            ]
+        ]
+    },
+    {
+        "id": "d9d66e63e4c9e133",
+        "type": "worldmap",
+        "z": "58268cd0e3865665",
+        "g": "e34a0433a87a046b",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "Custom",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1160,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e7e78c6895d7ba49",
+        "type": "mqtt in",
+        "z": "58268cd0e3865665",
+        "name": "TTN uplink",
+        "topic": "v3/1962107946@ttn/devices/+/up",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "bd06b8c0d19cd693",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "50d6ec83507495c6",
+                "a26e8c57c4a7d98b"
+            ]
+        ]
+    },
+    {
+        "id": "50d6ec83507495c6",
+        "type": "json",
+        "z": "58268cd0e3865665",
+        "name": "parse TTN JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "7ca8e38393ba160e"
+            ]
+        ]
+    },
+    {
+        "id": "7ca8e38393ba160e",
+        "type": "function",
+        "z": "58268cd0e3865665",
+        "name": "decode LoRa payload (multi-AP)",
+        "func": "// Format: [Count(1B)] + [(MAC 6B + RSSI 1B) * Count] + [Timestamp 2B]\n\nlet payloadRaw = msg.payload?.uplink_message?.frm_payload;\nif (!payloadRaw) {\n    node.warn(\"无 frm_payload\");\n    return null;\n}\n\nlet buffer = Buffer.from(payloadRaw, 'base64');\nif (buffer.length < 3) {\n    node.warn(\"数据包太短: \" + buffer.length);\n    return null;\n}\n\nlet count = buffer[0];\nlet aps = [];\nlet ptr = 1;\n\nfor (let i = 0; i < count; i++) {\n    if (ptr + 7 > buffer.length) {\n        node.warn(\"Buffer too short for AP #\" + i);\n        break;\n    }\n\n    let macBuf = buffer.slice(ptr, ptr + 6);\n    let mac = macBuf.toString('hex').match(/../g).join(':').toUpperCase();\n    ptr += 6;\n\n    let rssi = buffer.readInt8(ptr);\n    ptr += 1;\n\n    aps.push({ mac: mac, rssi: rssi });\n}\n\nlet ts = 0;\nif (ptr + 2 <= buffer.length) {\n    ts = buffer.readUInt16BE(ptr);\n} else {\n    node.warn(\"Buffer too short for timestamp\");\n}\n\nmsg.payload = { aps: aps, raw_count: count, timestamp: ts };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 220,
+        "wires": [
+            [
+                "d27e65a63235722a",
+                "a7aca80aa107a322"
+            ]
+        ]
+    },
+    {
+        "id": "d27e65a63235722a",
+        "type": "debug",
+        "z": "58268cd0e3865665",
+        "name": "decoded payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 900,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a7aca80aa107a322",
+        "type": "function",
+        "z": "58268cd0e3865665",
+        "name": "weighted localization + insert + map",
+        "func": "// Weighted centroid using global wifi_db\nlet db = global.get(\"wifi_db\");\nlet aps = msg.payload.aps || [];\nlet ts = msg.payload.timestamp || 0;\nlet node_id = \"ESP32_Tracker\";\n\nif (!db) {\n    node.warn(\"❌ wifi_db not loaded. Check CSV paths and init.\");\n    return [null, null];\n}\nif (!aps || aps.length === 0) {\n    node.warn(\"⚠️ empty aps\");\n    return [null, null];\n}\n\nlet matched = [];\nfor (let i = 0; i < aps.length; i++) {\n    let mac = aps[i].mac;\n    let rssi = aps[i].rssi;\n    if (db[mac]) {\n        matched.push({ lat: db[mac].lat, lon: db[mac].lon, rssi: rssi, mac: mac, ssid: db[mac].ssid });\n    }\n}\n\nif (matched.length === 0) {\n    node.warn(\"⚠️ No AP matched in wifi_db (maybe AP not in CSV / whitelist mismatch)\");\n}\n\nlet finalLat = null;\nlet finalLon = null;\n\nif (matched.length > 0) {\n    let sumLat = 0, sumLon = 0, sumW = 0;\n    matched.forEach(p => {\n        let w = Math.pow((p.rssi + 100), 2);\n        if (!isFinite(w) || w <= 0) w = 0.1;\n        sumLat += p.lat * w;\n        sumLon += p.lon * w;\n        sumW += w;\n    });\n    finalLat = sumLat / sumW;\n    finalLon = sumLon / sumW;\n    node.warn(\"📍 Estimated: \" + finalLat.toFixed(6) + \", \" + finalLon.toFixed(6) + \" (matched=\" + matched.length + \")\");\n}\n\nlet ap1 = aps[0] || { mac: null, rssi: null };\nlet ap2 = aps[1] || { mac: null, rssi: null };\nlet ap3 = aps[2] || { mac: null, rssi: null };\n\nfunction sqlValStr(v) { return (v === null || v === undefined) ? \"NULL\" : \"'\" + String(v).replace(/'/g, \"''\") + \"'\"; }\nfunction sqlValNum(v) { return (v === null || v === undefined || isNaN(v)) ? \"NULL\" : String(v); }\n\nlet sql = `\nINSERT INTO wifi_measurements\n(node_id, ap1_mac, ap1_rssi, ap2_mac, ap2_rssi, ap3_mac, ap3_rssi, timestamp, est_x, est_y)\nVALUES\n(\n  ${sqlValStr(node_id)},\n  ${sqlValStr(ap1.mac)}, ${sqlValNum(ap1.rssi)},\n  ${sqlValStr(ap2.mac)}, ${sqlValNum(ap2.rssi)},\n  ${sqlValStr(ap3.mac)}, ${sqlValNum(ap3.rssi)},\n  ${sqlValNum(ts)},\n  ${sqlValNum(finalLat)},\n  ${sqlValNum(finalLon)}\n);\n`;\n\n// --- worldmap output: use DRAW + COMMAND (fix: marker appears) ---\nlet mapMsgs = [];\n\nif (finalLat !== null && finalLon !== null) {\n    // 1) Draw (creates marker if not exists)\n    mapMsgs.push({\n        payload: {\n            lat: finalLat,\n            lon: finalLon,\n            name: \"My ESP32\",      // same name => overwrite/update\n            icon: \"user\",\n            iconColor: \"orange\",\n            layer: \"UserLayer\",\n            action: \"draw\"         // ✅ key fix: draw instead of move\n        }\n    });\n\n    // 2) Center + zoom\n    mapMsgs.push({\n        payload: {\n            command: {\n                lat: finalLat,\n                lon: finalLon,\n                zoom: 19\n            }\n        }\n    });\n}\n\n// Output 0: SQLite, Output 1: worldmap\nreturn [{ topic: sql, payload: [] }, mapMsgs];\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 220,
+        "wires": [
+            [
+                "c4a2c825dfe9abcb"
+            ],
+            [
+                "d9d66e63e4c9e133",
+                "f69c9bc9b0ef41ac"
+            ]
+        ]
+    },
+    {
+        "id": "c4a2c825dfe9abcb",
+        "type": "sqlite",
+        "z": "58268cd0e3865665",
+        "mydb": "sqlite_conf_db",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQLite DB",
+        "x": 1080,
+        "y": 140,
+        "wires": [
+            [
+                "46a18ad80d35ec9a"
+            ]
+        ]
+    },
+    {
+        "id": "46a18ad80d35ec9a",
+        "type": "debug",
+        "z": "58268cd0e3865665",
+        "name": "sqlite result",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1240,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f486fce6495028c8",
+        "type": "inject",
+        "z": "58268cd0e3865665",
+        "name": "CREATE wifi_access_points",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "84e551f06c7a5908"
+            ]
+        ]
+    },
+    {
+        "id": "84e551f06c7a5908",
+        "type": "function",
+        "z": "58268cd0e3865665",
+        "name": "create wifi_access_points",
+        "func": "msg.topic = `\nCREATE TABLE IF NOT EXISTS wifi_access_points (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  mac TEXT UNIQUE,\n  ssid TEXT,\n  room TEXT,\n  floor TEXT,\n  x REAL,\n  y REAL\n);\n`;\nmsg.payload = [];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "c4a2c825dfe9abcb"
+            ]
+        ]
+    },
+    {
+        "id": "b6d951fccc24285a",
+        "type": "inject",
+        "z": "58268cd0e3865665",
+        "name": "CREATE wifi_measurements",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "0ab11ccfee771d62"
+            ]
+        ]
+    },
+    {
+        "id": "0ab11ccfee771d62",
+        "type": "function",
+        "z": "58268cd0e3865665",
+        "name": "create wifi_measurements",
+        "func": "msg.topic = `\nCREATE TABLE IF NOT EXISTS wifi_measurements (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  node_id TEXT,\n  ap1_mac TEXT,\n  ap1_rssi INTEGER,\n  ap2_mac TEXT,\n  ap2_rssi INTEGER,\n  ap3_mac TEXT,\n  ap3_rssi INTEGER,\n  timestamp INTEGER,\n  est_x REAL,\n  est_y REAL\n);\n`;\nmsg.payload = [];\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "c4a2c825dfe9abcb"
+            ]
+        ]
+    },
+    {
+        "id": "f69c9bc9b0ef41ac",
+        "type": "debug",
+        "z": "58268cd0e3865665",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a26e8c57c4a7d98b",
+        "type": "debug",
+        "z": "58268cd0e3865665",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 270,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "57c5aed819896cd1",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-sqlite": "1.1.1",
+            "node-red-contrib-web-worldmap": "5.5.4"
+        }
+    }
+]
